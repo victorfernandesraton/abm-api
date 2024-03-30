@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "abomination"
+name = "abm-api"
 version = "0.1.0"
 description = "Simple implementation for ABM base in django"
 authors = ["Victor Raton <43411882+victorfernandesraton@users.noreply.github.com>"]
@@ -10,6 +10,8 @@ python = "^3.11"
 django = "^5.0.3"
 django-neomodel = "^0.1.1"
 gunicorn = "^21.2.0"
+python-decouple = "^3.8"
+psycopg2-binary = "^2.9.9"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.1.1"
