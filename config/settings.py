@@ -30,6 +30,11 @@ DEBUG = config("DEBUG")
 
 ALLOWED_HOSTS = []
 
+# confiog neo4j NEOMODEL
+NEOMODEL_NEO4J_BOLT_URL = config("NEO4J_DATABASE_URL")
+NEOMODEL_SIGNALS = True
+NEOMODEL_FORCE_TIMEZONE = False
+NEOMODEL_MAX_CONNECTION_POOL_SIZE = 50
 
 # Application definition
 
@@ -40,7 +45,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django_neomodel",
     "apps.core",
+    "apps.business_manager",
 ]
 
 MIDDLEWARE = [
