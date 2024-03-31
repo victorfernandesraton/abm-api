@@ -13,8 +13,6 @@ services:
     depends_on:
       - postgres-database
       - neo4j-database
-    volumes:
-      - app:/app
     restart: always
   postgres-database:
     image: postgres:16-bookworm

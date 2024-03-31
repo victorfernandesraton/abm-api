@@ -5,6 +5,7 @@ ENV POETRY_VIRTUALENVS_CREATE=false
 RUN python -m pip install --upgrade pip
 RUN pip install poetry 
 COPY pyproject.toml poetry.lock /app/
+COPY static/ /app/static
 RUN poetry install --no-interaction --no-cache --only=main 
 
 COPY . .
