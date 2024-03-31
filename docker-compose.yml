@@ -1,8 +1,7 @@
 services:
   app:
     build:
-      context: ./app/
-      dockerfile: Dockerfile
+      context: .
     ports:
       - 8080:8080
     environment:
@@ -14,6 +13,8 @@ services:
       - postgres-database
       - neo4j-database
     restart: always
+    volumes:
+      - .:/app 
   postgres-database:
     image: postgres:16-bookworm
     ports:
@@ -41,4 +42,3 @@ services:
 volumes:
   postgresdb:
   neo4j:
-  app:
