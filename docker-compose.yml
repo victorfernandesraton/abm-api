@@ -15,6 +15,7 @@ services:
     restart: always
     volumes:
       - .:/app 
+    command: sh entrypoint.sh
   postgres-database:
     image: postgres:16-bookworm
     ports:
